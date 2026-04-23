@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f4f6;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: white;
+  padding: 20px;
+  height: 100vh;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+/* Logo */
+.logo {
+  color: #7c3aed;
+  font-weight: bold;
+}
+
+/* Perfil */
+.profile-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-box img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.profile-box h3 {
+  margin: 10px 0 0;
+}
+
+.profile-box p {
+  color: gray;
+  font-size: 14px;
+}
+
+/* Botón */
+.create-btn {
+  width: 100%;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Menu */
+.menu {
+  margin-top: 20px;
+}
+
+.menu p {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.menu .active {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+/* Feed */
+.feed {
+  flex: 1;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Descripción */
+.card p {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Audio */
+.card audio {
+  width: 100%;
+}
+
+.modal-content input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.modal-content button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-content button:first-of-type {
+  background: purple;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content h2 {
+  margin: 0;
+}
+
+.modal-content input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.modal-content button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"] {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: white;
+}
+
+.image-modal {
+  background: white;
+  border-radius: 15px;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.image-modal img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  width: 120px;
+  object-fit: contain;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+}
