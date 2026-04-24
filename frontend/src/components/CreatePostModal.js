@@ -8,7 +8,10 @@ export default function CreatePostModal({ close, refreshPosts, user }) {
   const [descripcion, setDescripcion] = useState("");
   const [cancion, setCancion] = useState("");
 
-  // 🔥 Subir imagen a Cloudinary
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState([]);
+
+  //  Subir imagen a Cloudinary
   const subirImagen = async () => {
     const formData = new FormData();
     formData.append("file", imagen);
@@ -21,6 +24,13 @@ export default function CreatePostModal({ close, refreshPosts, user }) {
         body: formData
       }
     );
+
+    const buscarCancion = async () => {
+  const res = await axios.get(
+    `http://localhost:5000/api/spotify/search?q=${query}`
+  );
+  setResults(res.data);
+};
 
     const data = await res.json();
     return data.secure_url;
@@ -47,7 +57,6 @@ await axios.post("http://localhost:5000/api/posts", {
   imagen: imageUrl,
   descripcion,
   cancion: cancionEmbed,
-  foto : user?.foto
 });
 
 
@@ -69,7 +78,7 @@ await axios.post("http://localhost:5000/api/posts", {
 
         <form onSubmit={handleSubmit}>
 
-          {/* 🔥 INPUT DE ARCHIVO */}
+          {/*  INPUT DE ARCHIVO */}
           <input
             type="file"
             onChange={(e) => setImagen(e.target.files[0])}

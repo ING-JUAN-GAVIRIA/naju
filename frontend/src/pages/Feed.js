@@ -25,39 +25,55 @@ export default function Feed({ user }) {
     getPosts();
   }, []);
 
-  return (
-    <div className="layout">
+return (
+  <div className="layout">
 
-      <Sidebar 
-        user={user} 
-        openModal={() => setShowModal(true)} 
-      />
+    {/* IZQUIERDA */}
+    <Sidebar 
+      user={user} 
+      openModal={() => setShowModal(true)} 
+    />
 
-      <div className="feed">
-        {posts.map((post, index) => (
-          <PostCard 
-            key={index} 
-            post={post} 
-            onImageClick={() => setSelectedPost(post)}
-          />
-        ))}
-      </div>
-
-      {/* 🔥 MODAL CREAR POST */}
-      {showModal && (
-        <CreatePostModal 
-          close={() => setShowModal(false)} 
-          refreshPosts={getPosts}
-          user={user}
+    {/* CENTRO */}
+    <div className="feed">
+      {posts.map((post, index) => (
+        <PostCard 
+          key={index} 
+          post={post} 
+          onImageClick={() => setSelectedPost(post)}
         />
-      )}
+      ))}
+    </div>
 
-      {/* 🔥 MODAL IMAGEN + SPOTIFY */}
+    {/* 🔥 DERECHA (NUEVO) */}
+    <div className="rightbar">
+      <h3>Nuestra historia</h3>
+      <p>🔥 Bienvenido a NA-JU</p>
+      <p>💜 Comparte momentos únicos</p>
+
+      <h4 style={{ marginTop: 20 }}>Sugerencias</h4>
+      <p>@juan</p>
+      <p>@admin</p>
+      <p>@usuario</p>
+    </div>
+
+    {/* 🔥 MODAL CREAR POST */}
+    {showModal && (
+      <CreatePostModal 
+        close={() => setShowModal(false)} 
+        refreshPosts={getPosts}
+        user={user}
+      />
+    )}
+
+    {/* 🔥 MODAL IMAGEN */}
+    {selectedPost && (
       <ImageModal 
         post={selectedPost}
         close={() => setSelectedPost(null)}
       />
+    )}
 
-    </div>
-  );
+  </div>
+);
 }
