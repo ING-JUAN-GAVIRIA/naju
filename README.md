@@ -18,7 +18,7 @@ Red social desarrollada con tecnologías modernas, que permite crear publicacion
 
 ```bash
 git clone https://github.com/ING-JUAN-GAVIRIA/naju.git
-cd naju-pro-react
+cd naju
 ```
 
 ---
