@@ -74,39 +74,51 @@ await axios.post("http://localhost:5000/api/posts", {
     <div className="modal">
       <div className="modal-content">
 
-        <h2>Crear publicación</h2>
+        <h2>Publicación</h2>
 
-        <form onSubmit={handleSubmit}>
+        {/* INPUT GRANDE */}
+        <textarea
+          className="fb-textarea"
+          placeholder="Inspirate!!!"
+          value={descripcion}
+          onChange={(e) => setDescripcion(e.target.value)}
+        />
 
-          {/*  INPUT DE ARCHIVO */}
+        {/* ACCIONES */}
+        <div className="fb-actions">
+
+          {/* SUBIR IMAGEN */}
+          <label htmlFor="fileInput" className="fb-upload">
+            🖼️ Foto
+          </label>
+
           <input
             type="file"
+            id="fileInput"
             onChange={(e) => setImagen(e.target.files[0])}
-            required
+            style={{ display: "none" }}
           />
 
+          {/* CANCIÓN */}
           <input
             type="text"
-            placeholder="Descripción"
-            value={descripcion}
-            onChange={(e) => setDescripcion(e.target.value)}
-            required
-          />
-
-          <input
-            type="text"
-            placeholder="Link canción"
+            placeholder="🎵 Canción"
             value={cancion}
             onChange={(e) => setCancion(e.target.value)}
-            required
           />
 
-          <button type="submit">Publicar</button>
+        </div>
 
-        </form>
+        {/* BOTONES */}
+        <div className="fb-buttons">
+          <button onClick={close} className="cancel-btn">
+            Cancelar
+          </button>
 
-        <button onClick={close}>Cancelar</button>
-
+          <button onClick={handleSubmit} className="publish-btn">
+            Publicar
+          </button>
+        </div>
       </div>
     </div>
   );

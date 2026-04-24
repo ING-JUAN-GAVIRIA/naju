@@ -18,6 +18,11 @@ export default function Sidebar({ openModal, user }) {
     <button className="create-btn" onClick={openModal}>
     ✏️ Crear publicación
     </button>
+    
+
+    <div className="footer">
+  Desarrollado por <strong>Juan Diego Gaviria</strong>
+</div>
 
 
     </div>

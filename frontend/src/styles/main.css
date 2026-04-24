@@ -4,6 +4,15 @@ font-family: 'Segoe UI', sans-serif;
 background: #f3f4f6;
 }
 
+
+.footer {
+  margin-top: auto; /* 🔥 esto lo empuja hacia abajo */
+  padding: 15px;
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+}
+
 /* ========================= */
 /* 🔥 LAYOUT */
 /* ========================= */
@@ -14,14 +23,35 @@ gap: 20px;
 padding: 20px;
 }
 
+
+/* CONTENEDOR CENTRAL */
+.main-content {
+  margin-left: 250px;   /* espacio sidebar */
+  margin-right: 250px;  /* espacio rightbar */
+
+  display: flex;
+  justify-content: center; /* 🔥 CENTRA */
+}
+
+/* FEED */
+.feed {
+  width: 500px;         /* tamaño tipo Instagram */
+
+  gap: 20px;
+}
+
 /* ========================= */
 /* 📌 SIDEBAR IZQUIERDO */
 /* ========================= */
 .sidebar {
-width: 250px;
-position: sticky;
-top: 0;
-height: 100vh;
+  position: fixed;   /* 🔥 ahora sí queda fijo */
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* 🔥 BOTÓN CREAR FIJO */
@@ -29,7 +59,7 @@ height: 100vh;
 position: sticky;
 top: 0;
 background: #f3f4f6;
-padding: 10px 0;
+padding: 10px 20;
 z-index: 10;
 }
 
@@ -106,15 +136,24 @@ height: 100vh;
 gap: 20px;
 }
 
+
+
+
 /* ========================= */
 /* 📌 SIDEBAR DERECHO */
 /* ========================= */
 .rightbar {
-width: 250px;
-position: sticky;
-top: 0;
-height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 .rightbar h3 {
 margin-top: 0;
@@ -300,11 +339,134 @@ width: 100%;
   background: white;
   padding: 20px;
   border-radius: 15px;
-  width: 400px;
-  max-width: 90%;
-}
 
+  width: auto;          /* 🔥 ya no fijo */
+  max-width: 90vw;      /* 🔥 ancho máximo pantalla */
+  max-height: 90vh;     /* 🔥 alto máximo pantalla */
+      /* 🔥 scroll si se pasa */
+}
 .modal-content img {
   width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: contain;
+}
+
+
+
+.upload-btn {
+  display: inline-block;
+  padding: 10px 15px;
   border-radius: 10px;
+  background: #ede9fe;
+  color: #7c3aed;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.upload-btn:hover {
+  background: #ddd6fe;
+}
+
+/* textarea estilo Facebook */
+.fb-textarea {
+  width: 100%;
+  height: 100px;
+  border: none;
+  resize: none;
+  font-size: 16px;
+  outline: none;
+}
+
+/* acciones */
+.fb-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* botón subir imagen */
+.fb-upload {
+  background: #f0f2f5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* input canción */
+.fb-actions input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* botones */
+.fb-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* cancelar */
+.cancel-btn {
+  background: #e4e6eb;  
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* publicar */
+.publish-btn {
+  background: #7c3aed;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+.welcome-modal {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  width: 1000px;
+}
+
+.welcome-modal h2 {
+  margin-bottom: 10px;
+}
+
+.welcome-modal button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #7c3aed;
+  color: white;
+  cursor: pointer;
+}
+
+
+.info-item {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.info-item:hover {
+  background: #ede9fe;
+  transform: scale(1.03);
 }

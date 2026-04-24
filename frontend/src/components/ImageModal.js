@@ -13,7 +13,7 @@ export default function ImageModal({ post, close }) {
         <p>{post.descripcion}</p>
 
         {/* 🎵 SPOTIFY */}
-        {post.cancion && (
+        {post.cancion?.includes("spotify") && (
           <iframe
             src={post.cancion}
             width="100%"

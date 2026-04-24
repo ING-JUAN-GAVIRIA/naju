@@ -56,10 +56,11 @@ export default function Login({ setUser }) {
           password,
           foto: imageUrl
         });
+        
 
         alert("Usuario creado");
         setIsRegister(false);
-      } else {
+      }else {
         const res = await axios.post("http://localhost:5000/api/auth/login", {
           email,
           password
@@ -67,6 +68,7 @@ export default function Login({ setUser }) {
 
         setUser(res.data);
       }
+      localStorage.setItem("firstLogin", "true");
 
     } catch (err) {
   console.error(err);
