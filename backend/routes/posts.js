@@ -23,7 +23,6 @@ r.post("/", async (req, res) => {
       imagen,
       descripcion,
       cancion,
-      foto
     });
 
     res.json(post);
