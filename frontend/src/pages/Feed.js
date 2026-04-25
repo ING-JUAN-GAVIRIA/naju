@@ -104,7 +104,20 @@ return (
     <div className="modal-content">
       <h2>Juan Diego Gaviria</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam id lorem. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus
+      Soy un chico que no esperaba encontrar algo tan real,
+hasta que llegaste tú.
+Poco a poco, sin darme cuenta,
+empecé a cambiar, a crecer,
+a ver la vida de una forma diferente.
+Me enseñaste que los pequeños momentos
+pueden significarlo todo,
+y que cuando el amor es sincero,
+todo tiene más sentido.
+Hoy soy alguien que quiere construir,
+cuidar y valorar lo que tenemos,
+porque contigo aprendí que el amor no solo se siente,
+también se demuestra 💜
+
       </p>
       <button onClick={() => setInfoModal(null)}>Cerrar</button>
     </div>
@@ -128,15 +141,7 @@ return (
     <div className="modal-content">
       <h2>Como nos conocimos</h2>
       <p>
-        Todo empezó sin que lo planeáramos...
-un día cualquiera que terminó siendo el más importante.
-
-Entre miradas, palabras y sonrisas,
-algo comenzó a sentirse diferente.
-
-Desde ese momento,
-sin darnos cuenta,
-empezamos a escribir nuestra historia 💜
+       En construcion...
       </p>
       <button onClick={() => setInfoModal(null)}>Cerrar</button>
     </div>
@@ -149,7 +154,22 @@ empezamos a escribir nuestra historia 💜
         <div className="welcome-modal">
 
           <h2>Bienvenido 🎉</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam id lorem. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus</p>
+          <p>Bienvenida a NA-JU 💜
+
+Una plataforma cuyo nombre nace de la unión de nuestros nombres,
+Nataly y Juan.
+
+Más que una plataforma,
+es un lugar donde quiero plasmar nuestra historia,
+donde cada foto tendrá un significado especial
+y cada momento quedará guardado para siempre.
+
+Quiero que sepas que esta página puede tener algunos errores,
+ya que actualmente se encuentra en construcción,
+pero ya es una primera versión,
+el inicio de algo que seguirá creciendo con nosotros…
+
+Y lo mejor… es que esto apenas comienza 💜</p>
 
           <button onClick={() => setShowWelcome(false)}>
             Empezar

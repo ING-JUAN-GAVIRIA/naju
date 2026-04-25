@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios"; // 🔥 ESTE FALTABA
 
-export default function PostCard({ post, onImageClick, user, refreshPosts }) {
+export default function PostCard({ post, onImageClick,user, refreshPosts }) {
 
   const handleDelete = async (id) => {
     console.log("CLICK DELETE", id); // prueba
@@ -18,9 +18,17 @@ export default function PostCard({ post, onImageClick, user, refreshPosts }) {
     <div className="card">
 
       <div className="card-header">
-        <img src={post.user?.foto} alt="" />
+        <img src={user?.foto } alt="" />
         <h4>{post.user?.nombre || post.user}</h4>
+
+        <button 
+        className="delete-btn"
+        onClick={() => handleDelete(post._id)}
+      >
+        X
+      </button>
       </div>
+      
 
       <img 
         src={post.imagen} 
@@ -29,12 +37,7 @@ export default function PostCard({ post, onImageClick, user, refreshPosts }) {
         style={{ cursor: "pointer" }}
       />
 
-      <button 
-        className="delete-btn"
-        onClick={() => handleDelete(post._id)}
-      >
-        X
-      </button>
+      
 
     </div>
   );
