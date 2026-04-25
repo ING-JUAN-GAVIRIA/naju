@@ -6,6 +6,6 @@ export default function App() {
   const [user, setUser] = useState(null);
 
   return user 
-    ? <Feed user={user} /> 
+    ? <Feed user={user} setUser={setUser} />
     : <Login setUser={setUser} />;
 }

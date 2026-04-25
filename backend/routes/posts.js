@@ -25,6 +25,15 @@ r.post("/", async (req, res) => {
       cancion,
     });
 
+    r.delete("/:id", async (req, res) => {
+  try {
+    await Post.findByIdAndDelete(req.params.id);
+    res.json({ message: "Post eliminado" });
+  } catch (err) {
+    res.status(500).json({ error: "Error al eliminar" });
+  }
+});
+
     res.json(post);
 
   } catch (err) {

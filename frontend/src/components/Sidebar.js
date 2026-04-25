@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
 
-export default function Sidebar({ openModal, user }) {
+export default function Sidebar({ openModal, user, setUser }) {
   return (
     <div className="sidebar">
 
@@ -18,6 +18,16 @@ export default function Sidebar({ openModal, user }) {
     <button className="create-btn" onClick={openModal}>
     ✏️ Crear publicación
     </button>
+
+<button
+  className="logout-btn"
+  onClick={() => {
+    localStorage.removeItem("user");
+    setUser(null);
+  }}
+>
+  🚪 Cerrar sesión
+</button>
     
 
     <div className="footer">

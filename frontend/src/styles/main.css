@@ -40,6 +40,17 @@ padding: 20px;
   gap: 20px;
 }
 
+
+  .feed-title {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+  color: #7c3aed;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
 /* ========================= */
 /* 📌 SIDEBAR IZQUIERDO */
 /* ========================= */
@@ -392,7 +403,7 @@ width: 100%;
   background: #f0f2f5;
   padding: 8px 12px;
   border-radius: 8px;
-  cursor: pointer;
+  cursor: pointer;  
   font-weight: 500;
 }
 
@@ -469,4 +480,33 @@ width: 100%;
 .info-item:hover {
   background: #ede9fe;
   transform: scale(1.03);
+}
+
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover .delete-btn {
+  opacity: 1;
 }
