@@ -5,6 +5,7 @@ const PostSchema = new mongoose.Schema({
   imagen: String,
   descripcion: String,
   cancion: String,
+  foto : String,
 });
 
 module.exports = mongoose.model("Post", PostSchema);

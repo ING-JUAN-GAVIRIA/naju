@@ -57,6 +57,7 @@ await axios.post("http://localhost:5000/api/posts", {
   imagen: imageUrl,
   descripcion,
   cancion: cancionEmbed,
+  foto: user?.foto,
 });
 
 

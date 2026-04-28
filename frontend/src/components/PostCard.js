@@ -18,7 +18,7 @@ export default function PostCard({ post, onImageClick,user, refreshPosts }) {
     <div className="card">
 
       <div className="card-header">
-        <img src={user?.foto } alt="" />
+        <img src={post.user?.foto } alt="" />
         <h4>{post.user?.nombre || post.user}</h4>
 
         <button 

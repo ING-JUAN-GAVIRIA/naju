@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ImageModal({ post, close }) {
+export default function ImageModal({ post, close, user}) {
   if (!post) return null;
 
   return (
@@ -10,6 +10,7 @@ export default function ImageModal({ post, close }) {
         <img src={post.imagen} alt="" />
 
         <h3>{post.user?.nombre || post.user}</h3>
+        <img src={user?.foto } alt="" />
         <p>{post.descripcion}</p>
 
         {/* 🎵 SPOTIFY */}
